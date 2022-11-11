@@ -1,0 +1,47 @@
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+  }
+
+ /* nav desktop*/
+  #content-nav{
+    display: flex;
+    background-color: white;
+    width: 1024px;
+    height: 85px;
+    
+  }
+  .icon{
+    height: 16px;
+    width: 16px;
+
+  }
+ .logo{
+    font-size: 1.5rem;
+    float: left;
+    margin-left: 2.9%;
+    align-items: center;
+ }
+
+ .content ul{
+    display: flex;
+    justify-content: right;
+ }
+ .content li{
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: #4a4a4a;
+    flex-direction: row-reverse;
+    margin-right: 2.9%;
+    
+
+ }
+/* nav móvil*/
+  .mobile{
+    display: none;
+  }
+
+  /*Main*/
+  .main-content{
+    background-image: url(resources/images/banner-landingpage.jpg);
+  }
