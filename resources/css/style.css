@@ -122,20 +122,26 @@ header .mobile {
 /* Sign Up Section */
 
 #sign-up-section {
+  height: 43.5rem;
+  background-image:url('C:/Users/alber/Desktop/Projects/code_academy/web-responsive/resources/images/banner-landingpage.jpg');
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(4, 25%);
+}
+
+#sign-up-cta {
+  flex: 1;
+  grid-column: 2 / 9;
+  grid-row: 2 / span 2;;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 43.5rem;
-}
- .banner{
-  
-
- }
-#sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
+    padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  width: 26rem;
+  height: 20rem;
 }
 
 #sign-up-cta .content {
@@ -229,6 +235,14 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
+img[src*="feature"]{
+  width: 90%;
+  height: 65%;
+}
+
+.feature .content{
+padding-top: 2.5rem;
+}
 .feature {
   flex: 1;
   padding: 2rem;
@@ -258,10 +272,16 @@ header .mobile {
 
 /*FEATURES QUERIES*/
 @media only screen and (max-width: 890px) {
+
+  #features-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  }
   .feature h2 {
     font-size: 1.125rem;
     line-height: 1.3;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .feature h3 {
@@ -287,17 +307,22 @@ header .mobile {
 #filters-section {
   padding: 4rem 0;
   background-color: #4a4a4a;
+  width: cover;
 }
 
 #filters-section .content {
   padding: 0 .625rem;
   margin-bottom: 5rem;
+ 
+  
 }
 
 #filters-section .content h2 {
   font-size: 2.25rem;
   font-weight: bold;
   color: white;
+  padding-top: 4rem;
+  
 }
 
 #filters-section .content h3 {
@@ -305,12 +330,24 @@ header .mobile {
   line-height: 1.4;
   font-weight: 300;
   color: white;
+
 }
 
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  /* justify-content:space-around; */
+  display: flex;
+  justify-content: center;
+  margin-botom: 4rem;
 }
+
+#filters-section img{
+width: 255px;
+height: 255px;;
+flex-direction: row;
+}
+
  /*FILTERS QUERIES*/
 @media only screen and (max-width: 760px) {
   #filters-section {
@@ -348,11 +385,11 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -361,25 +398,30 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
+
 }
 
 /*QUOTES QUERIES*/
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+
+ }
+  #quotes-section .content {
     padding: 1.875rem .625rem;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
+
   }
 
-  #quotes-section quote-citation {
-    display: block;
+  #quotes-section .quote-citation {
     padding-top: 1rem;
-    margin: auto;
   }
 }
 
@@ -388,12 +430,14 @@ header .mobile {
 footer {
   background-color: #9b9b9b;
   padding: 1.5rem 2rem;
+  height: 3.875rem;
+  width: cover;
 }
 
 footer .content {
   color: white;
   display: flex;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 footer .copyright {
